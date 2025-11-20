@@ -1,0 +1,37 @@
+# 1. Tableau Packaged Files (Crucial to Ignore)
+# These are large binary ZIP files that contain the workbook AND the data.
+# They are not good for Git version control.
+*.twbx
+
+# 2. Tableau Extracts (CRITICAL to Ignore)
+# These are binary files containing compressed data and are often HUGE.
+# They make your Git repo bloated and slow.
+*.hyper
+*.tde
+
+# 3. Tableau Generated Temporary Files
+# Tableau and its associated products (like Prep) create many temporary files.
+*.log
+*.tmp
+temp*.twb
+temp*.twbx
+
+# 4. Data Backup/System Files
+# If you are using Windows, these files can appear.
+~$*
+*.bak
+# Mac OS X directory service metadata
+.DS_Store
+
+# 5. Local Data (If using a massive file)
+# If your raw data is a large CSV or Excel file, ignore it here
+# and document the source in your README.
+# If your data is small (e.g., < 1MB), you can keep it, but be careful.
+# /data/*.csv
+# /data/*.xlsx
+
+# 6. IDE/Editor Files (Optional)
+# If you use a specific code editor, ignore its settings files.
+# Common for VS Code, JetBrains, etc.
+.vscode/
+.idea/
